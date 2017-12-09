@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+package-lock.json
+start.sh
+.avoscloud
+.leancloud
+
+# VIM
+*~
+*.swp
+
+# IDE
+.idea
+.buildpath
+.project
