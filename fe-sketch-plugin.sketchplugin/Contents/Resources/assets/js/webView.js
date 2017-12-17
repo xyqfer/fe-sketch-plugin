@@ -1,7 +1,8 @@
-// Disable the context menu
 document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
 });
+
+new Clipboard(".J-copy-btn");
 
 let codeBlock = document.querySelector("#code");
 let textContent = document.querySelector("#text-content");
@@ -65,7 +66,7 @@ function updatePreview(params) {
     let style = params.attributes;
 
     previewItem.innerHTML = params.content || '';
-    textContent.innerHTML = params.content || '';
+    textContent.innerHTML = (params.content || '').replace(/\n/g, '');
 
     let displayCode = `${style.replace(/(;)/g, '$1\n')}`;
 

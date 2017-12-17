@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="assets/css/webView.css">
     <link rel="stylesheet" href="lib/highlight/tomorrow-custom.css">
     <script src="lib/highlight/highlight.pack.js"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
 </head>
 <body>
 <div class="preview">
@@ -34,14 +36,22 @@
     </div>
 </div>
 <div class="code-area">
+    <div class="title">CSS</div>
     <pre>
       <code id="code" class="code scss" contenteditable></code>
     </pre>
+    <button id="J-copy-1"
+            class="copy-btn J-copy-btn"
+            data-clipboard-target="#code">复制</button>
 </div>
 <div class="code-area">
+    <div class="title">文案</div>
     <pre>
       <code id="text-content" class="code scss" contenteditable></code>
     </pre>
+    <button id="J-copy-2"
+            class="copy-btn J-copy-btn"
+            data-clipboard-target="#text-content">复制</button>
 </div>
 <script src="assets/js/webView.js"></script>
 </body>
