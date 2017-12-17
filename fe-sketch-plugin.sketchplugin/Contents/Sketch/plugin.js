@@ -1,5 +1,5 @@
 @import 'constants.js'
-var identifier = "com.helkyle.panel";
+let identifier = "com.helkyle.panel";
 
 function toArray (object) {
   if (Array.isArray(object)) {
@@ -91,20 +91,20 @@ var onSelectionChanged = function(context) {
       var attributes = layer.CSSAttributes();
 
       if (layer.class() == "MSTextLayer") {
-        if (!layer.lineHeight()) {
-          attributes.addObject(`line-height: 1.4;`);
-        }
+        // if (!layer.lineHeight()) {
+        //   attributes.addObject(`line-height: 1.4;`);
+        // }
         for (const key in TEXT_ALIGNMENT) {
           if (layer.textAlignment() === TEXT_ALIGNMENT[key]) {
             attributes.addObject(`text-align: ${TEXT_ALIGNMENT_MAP[key]};`);
           }
         }
       }
-      attributes.addObject('\n');
-      attributes.addObject('/* Size: */');
+      // attributes.addObject('\n');
+      // attributes.addObject('/* Size: */');
       attributes.addObject(`width: ${frame.width()}px;`);
       attributes.addObject(`height: ${frame.height()}px;`);
-      let params = {}
+      let params = {};
       if (layer.class() == "MSTextLayer") {
         params = {
           attributes: attributes.join(" "),
